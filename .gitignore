@@ -3,4 +3,5 @@
 /CRM.Model/bin
 /CRM1/bin
 /packages
-.lock
+*.lock
+/.vs
