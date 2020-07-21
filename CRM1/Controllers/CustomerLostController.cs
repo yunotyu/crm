@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using CRM.Model;
 using CRM.BLL;
+using CRM.DAL;
 
 namespace CRM.Web.Controllers
 {
@@ -27,7 +28,7 @@ namespace CRM.Web.Controllers
             //实例化查询对象
             cst_lost searchEntity = new cst_lost();
             //获得分页数据
-            ViewData["pagerHelper"] = new PageHelper<cst_lost>(new cst_lostService().GetLostCustomerBySearchEntity(searchEntity), 1, 3);
+            ViewData["pagerHelper"] = new PageHelper<cst_lost>(new LinqHelper().Db.cst_lost.Where(l=>true).ToList(), 1, 3);
             ViewData["cstStatus"] = new SelectList(new bas_dictService().GetDictsByType("客户流失状态"), "dict_value", "dict_item");
             return View(searchEntity);
         }
