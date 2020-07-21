@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="lf_crm_db2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="bas_dict">
+    <Key>
+      <PropertyRef Name="dict_id" />
+    </Key>
+    <Property Name="dict_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dict_type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="dict_item" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="dict_value" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="dict_is_editable" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cst_activity">
+    <Key>
+      <PropertyRef Name="atv_id" />
+    </Key>
+    <Property Name="atv_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="atv_cust_no" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="atv_cust_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="atv_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="atv_place" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="atv_title" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="atv_desc" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="aty_remark" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="cst_customer" Relationship="Self.FK_atv_cust_no" FromRole="cst_activity" ToRole="cst_customer" />
+  </EntityType>
+  <EntityType Name="cst_customer">
+    <Key>
+      <PropertyRef Name="cust_no" />
+    </Key>
+    <Property Name="cust_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cust_no" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cust_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cust_region" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cust_manager_id" Type="Int32" />
+    <Property Name="cust_manager_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cust_level" Type="Int32" />
+    <Property Name="cust_level_label" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cust_satisfy" Type="Int32" />
+    <Property Name="cust_credit" Type="Int32" />
+    <Property Name="cust_addr" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="cust_zip" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="cust_tel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cust_fax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cust_website" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cust_licence_no" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cust_chieftain" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cust_bankroll" Type="Int32" />
+    <Property Name="cust_turnover" Type="Int32" />
+    <Property Name="cust_bank" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="cust_bank_account" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cust_local_tax_no" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cust_national_tax_no" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cust_status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="cst_activity" Relationship="Self.FK_atv_cust_no" FromRole="cst_customer" ToRole="cst_activity" />
+    <NavigationProperty Name="cst_linkman" Relationship="Self.FK_lkm_cust_no" FromRole="cst_customer" ToRole="cst_linkman" />
+    <NavigationProperty Name="cst_lost" Relationship="Self.FK_lst_cust_no" FromRole="cst_customer" ToRole="cst_lost" />
+    <NavigationProperty Name="orders" Relationship="Self.FK_odr_cust_no" FromRole="cst_customer" ToRole="orders" />
+    <NavigationProperty Name="cst_service" Relationship="Self.FK_svr_cust_no" FromRole="cst_customer" ToRole="cst_service" />
+  </EntityType>
+  <EntityType Name="cst_linkman">
+    <Key>
+      <PropertyRef Name="lkm_id" />
+    </Key>
+    <Property Name="lkm_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="lkm_cust_no" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lkm_cust_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="lkm_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lkm_sex" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="lkm_postion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="lkm_tel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="lkm_mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="lkm_memo" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="cst_customer" Relationship="Self.FK_lkm_cust_no" FromRole="cst_linkman" ToRole="cst_customer" />
+  </EntityType>
+  <EntityType Name="cst_lost">
+    <Key>
+      <PropertyRef Name="lst_id" />
+    </Key>
+    <Property Name="lst_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="lst_cust_no" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lst_cust_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="lst_cust_manager_id" Type="Int32" Nullable="false" />
+    <Property Name="lst_cust_manager_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lst_last_order_date" Type="DateTime" Precision="3" />
+    <Property Name="lst_lost_date" Type="DateTime" Precision="3" />
+    <Property Name="lst_delay" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="lst_reason" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="lst_status" Type="Int32" />
+    <NavigationProperty Name="cst_customer" Relationship="Self.FK_lst_cust_no" FromRole="cst_lost" ToRole="cst_customer" />
+  </EntityType>
+  <EntityType Name="cst_service">
+    <Key>
+      <PropertyRef Name="svr_id" />
+    </Key>
+    <Property Name="svr_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="svr_type" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="svr_title" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="svr_cust_no" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="svr_cust_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="svr_status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="svr_request" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="svr_create_id" Type="Int32" Nullable="false" />
+    <Property Name="svr_create_by" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="svr_create_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="svr_due_id" Type="Int32" />
+    <Property Name="svr_due_to" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="svr_due_date" Type="DateTime" Precision="3" />
+    <Property Name="svr_deal" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" />
+    <Property Name="svr_deal_id" Type="Int32" />
+    <Property Name="svr_deal_by" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="svr_deal_date" Type="DateTime" Precision="3" />
+    <Property Name="svr_result" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="svr_satisfy" Type="Int32" />
+    <NavigationProperty Name="cst_customer" Relationship="Self.FK_svr_cust_no" FromRole="cst_service" ToRole="cst_customer" />
+  </EntityType>
+  <EntityType Name="orders">
+    <Key>
+      <PropertyRef Name="odr_id" />
+    </Key>
+    <Property Name="odr_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="odr_cust_no" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="odr_cust_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="odr_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="odr_addr" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="odr_status" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="cst_customer" Relationship="Self.FK_odr_cust_no" FromRole="orders" ToRole="cst_customer" />
+    <NavigationProperty Name="orders_line" Relationship="Self.FK_odd_order_id" FromRole="orders" ToRole="orders_line" />
+  </EntityType>
+  <EntityType Name="orders_line">
+    <Key>
+      <PropertyRef Name="odd_id" />
+    </Key>
+    <Property Name="odd_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="odd_order_id" Type="Int32" Nullable="false" />
+    <Property Name="odd_prod_id" Type="Int32" Nullable="false" />
+    <Property Name="odd_count" Type="Int32" Nullable="false" />
+    <Property Name="odd_unit" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="odd_price" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="orders" Relationship="Self.FK_odd_order_id" FromRole="orders_line" ToRole="orders" />
+    <NavigationProperty Name="product" Relationship="Self.FK_odd_prod_id" FromRole="orders_line" ToRole="product" />
+  </EntityType>
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="prod_id" />
+    </Key>
+    <Property Name="prod_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="prod_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="prod_type" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="prod_batch" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="prod_unit" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="prod_price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="prod_memo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="orders_line" Relationship="Self.FK_odd_prod_id" FromRole="product" ToRole="orders_line" />
+    <NavigationProperty Name="storage" Relationship="Self.FK_stk_prod_id" FromRole="product" ToRole="storage" />
+  </EntityType>
+  <EntityType Name="sal_chance">
+    <Key>
+      <PropertyRef Name="chc_id" />
+    </Key>
+    <Property Name="chc_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="chc_source" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="chc_cust_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="chc_title" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="chc_rate" Type="Int32" Nullable="false" />
+    <Property Name="chc_linkman" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="chc_tel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="chc_desc" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="chc_create_id" Type="Int32" Nullable="false" />
+    <Property Name="chc_create_by" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="chc_create_date" Type="DateTime" Precision="3" />
+    <Property Name="chc_due_id" Type="Int32" />
+    <Property Name="chc_due_to" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="chc_due_date" Type="DateTime" Precision="3" />
+    <Property Name="chc_status" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="sal_plan" Relationship="Self.FK_pla_chc_id" FromRole="sal_chance" ToRole="sal_plan" />
+  </EntityType>
+  <EntityType Name="sal_plan">
+    <Key>
+      <PropertyRef Name="pla_id" />
+    </Key>
+    <Property Name="pla_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pla_chc_id" Type="Int32" Nullable="false" />
+    <Property Name="pla_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="pla_todo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="pla_result" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="sal_chance" Relationship="Self.FK_pla_chc_id" FromRole="sal_plan" ToRole="sal_chance" />
+  </EntityType>
+  <EntityType Name="storage">
+    <Key>
+      <PropertyRef Name="stk_id" />
+    </Key>
+    <Property Name="stk_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="stk_prod_id" Type="Int32" Nullable="false" />
+    <Property Name="stk_warehouse" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="stk_ware" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="stk_count" Type="Int32" Nullable="false" />
+    <Property Name="stk_memo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="product" Relationship="Self.FK_stk_prod_id" FromRole="storage" ToRole="product" />
+  </EntityType>
+  <EntityType Name="sys_right">
+    <Key>
+      <PropertyRef Name="right_code" />
+    </Key>
+    <Property Name="right_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="right_parent_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="right_type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="right_text" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="right_url" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="right_tip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="sys_role_right" Relationship="Self.FK_rf_right_code" FromRole="sys_right" ToRole="sys_role_right" />
+  </EntityType>
+  <EntityType Name="sys_role">
+    <Key>
+      <PropertyRef Name="role_id" />
+    </Key>
+    <Property Name="role_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="role_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="role_desc" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="role_flag" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="sys_role_right" Relationship="Self.FK_rf_role_id" FromRole="sys_role" ToRole="sys_role_right" />
+    <NavigationProperty Name="sys_user" Relationship="Self.FK_usr_role_id" FromRole="sys_role" ToRole="sys_user" />
+  </EntityType>
+  <EntityType Name="sys_role_right">
+    <Key>
+      <PropertyRef Name="rf_id" />
+    </Key>
+    <Property Name="rf_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rf_role_id" Type="Int32" Nullable="false" />
+    <Property Name="rf_right_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="sys_right" Relationship="Self.FK_rf_right_code" FromRole="sys_role_right" ToRole="sys_right" />
+    <NavigationProperty Name="sys_role" Relationship="Self.FK_rf_role_id" FromRole="sys_role_right" ToRole="sys_role" />
+  </EntityType>
+  <EntityType Name="sys_user">
+    <Key>
+      <PropertyRef Name="usr_id" />
+    </Key>
+    <Property Name="usr_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="usr_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="usr_pwd" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="usr_role_id" Type="Int32" Nullable="false" />
+    <Property Name="usr_state" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="sys_role" Relationship="Self.FK_usr_role_id" FromRole="sys_user" ToRole="sys_role" />
+  </EntityType>
+  <Association Name="FK_atv_cust_no">
+    <End Role="cst_customer" Type="Self.cst_customer" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="cst_activity" Type="Self.cst_activity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cst_customer">
+        <PropertyRef Name="cust_no" />
+      </Principal>
+      <Dependent Role="cst_activity">
+        <PropertyRef Name="atv_cust_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_lkm_cust_no">
+    <End Role="cst_customer" Type="Self.cst_customer" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="cst_linkman" Type="Self.cst_linkman" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cst_customer">
+        <PropertyRef Name="cust_no" />
+      </Principal>
+      <Dependent Role="cst_linkman">
+        <PropertyRef Name="lkm_cust_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_lst_cust_no">
+    <End Role="cst_customer" Type="Self.cst_customer" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="cst_lost" Type="Self.cst_lost" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cst_customer">
+        <PropertyRef Name="cust_no" />
+      </Principal>
+      <Dependent Role="cst_lost">
+        <PropertyRef Name="lst_cust_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_odr_cust_no">
+    <End Role="cst_customer" Type="Self.cst_customer" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="orders" Type="Self.orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cst_customer">
+        <PropertyRef Name="cust_no" />
+      </Principal>
+      <Dependent Role="orders">
+        <PropertyRef Name="odr_cust_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_svr_cust_no">
+    <End Role="cst_customer" Type="Self.cst_customer" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="cst_service" Type="Self.cst_service" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cst_customer">
+        <PropertyRef Name="cust_no" />
+      </Principal>
+      <Dependent Role="cst_service">
+        <PropertyRef Name="svr_cust_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_odd_order_id">
+    <End Role="orders" Type="Self.orders" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="orders_line" Type="Self.orders_line" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="orders">
+        <PropertyRef Name="odr_id" />
+      </Principal>
+      <Dependent Role="orders_line">
+        <PropertyRef Name="odd_order_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_odd_prod_id">
+    <End Role="product" Type="Self.product" Multiplicity="1" />
+    <End Role="orders_line" Type="Self.orders_line" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="prod_id" />
+      </Principal>
+      <Dependent Role="orders_line">
+        <PropertyRef Name="odd_prod_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_stk_prod_id">
+    <End Role="product" Type="Self.product" Multiplicity="1" />
+    <End Role="storage" Type="Self.storage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="prod_id" />
+      </Principal>
+      <Dependent Role="storage">
+        <PropertyRef Name="stk_prod_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pla_chc_id">
+    <End Role="sal_chance" Type="Self.sal_chance" Multiplicity="1" />
+    <End Role="sal_plan" Type="Self.sal_plan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sal_chance">
+        <PropertyRef Name="chc_id" />
+      </Principal>
+      <Dependent Role="sal_plan">
+        <PropertyRef Name="pla_chc_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_rf_right_code">
+    <End Role="sys_right" Type="Self.sys_right" Multiplicity="1" />
+    <End Role="sys_role_right" Type="Self.sys_role_right" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sys_right">
+        <PropertyRef Name="right_code" />
+      </Principal>
+      <Dependent Role="sys_role_right">
+        <PropertyRef Name="rf_right_code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_rf_role_id">
+    <End Role="sys_role" Type="Self.sys_role" Multiplicity="1" />
+    <End Role="sys_role_right" Type="Self.sys_role_right" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sys_role">
+        <PropertyRef Name="role_id" />
+      </Principal>
+      <Dependent Role="sys_role_right">
+        <PropertyRef Name="rf_role_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_usr_role_id">
+    <End Role="sys_role" Type="Self.sys_role" Multiplicity="1" />
+    <End Role="sys_user" Type="Self.sys_user" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sys_role">
+        <PropertyRef Name="role_id" />
+      </Principal>
+      <Dependent Role="sys_user">
+        <PropertyRef Name="usr_role_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="lf_crm_db2Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="bas_dict" EntityType="Self.bas_dict" />
+    <EntitySet Name="cst_activity" EntityType="Self.cst_activity" />
+    <EntitySet Name="cst_customer" EntityType="Self.cst_customer" />
+    <EntitySet Name="cst_linkman" EntityType="Self.cst_linkman" />
+    <EntitySet Name="cst_lost" EntityType="Self.cst_lost" />
+    <EntitySet Name="cst_service" EntityType="Self.cst_service" />
+    <EntitySet Name="orders" EntityType="Self.orders" />
+    <EntitySet Name="orders_line" EntityType="Self.orders_line" />
+    <EntitySet Name="product" EntityType="Self.product" />
+    <EntitySet Name="sal_chance" EntityType="Self.sal_chance" />
+    <EntitySet Name="sal_plan" EntityType="Self.sal_plan" />
+    <EntitySet Name="storage" EntityType="Self.storage" />
+    <EntitySet Name="sys_right" EntityType="Self.sys_right" />
+    <EntitySet Name="sys_role" EntityType="Self.sys_role" />
+    <EntitySet Name="sys_role_right" EntityType="Self.sys_role_right" />
+    <EntitySet Name="sys_user" EntityType="Self.sys_user" />
+    <AssociationSet Name="FK_atv_cust_no" Association="Self.FK_atv_cust_no">
+      <End Role="cst_customer" EntitySet="cst_customer" />
+      <End Role="cst_activity" EntitySet="cst_activity" />
+    </AssociationSet>
+    <AssociationSet Name="FK_lkm_cust_no" Association="Self.FK_lkm_cust_no">
+      <End Role="cst_customer" EntitySet="cst_customer" />
+      <End Role="cst_linkman" EntitySet="cst_linkman" />
+    </AssociationSet>
+    <AssociationSet Name="FK_lst_cust_no" Association="Self.FK_lst_cust_no">
+      <End Role="cst_customer" EntitySet="cst_customer" />
+      <End Role="cst_lost" EntitySet="cst_lost" />
+    </AssociationSet>
+    <AssociationSet Name="FK_odr_cust_no" Association="Self.FK_odr_cust_no">
+      <End Role="cst_customer" EntitySet="cst_customer" />
+      <End Role="orders" EntitySet="orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_svr_cust_no" Association="Self.FK_svr_cust_no">
+      <End Role="cst_customer" EntitySet="cst_customer" />
+      <End Role="cst_service" EntitySet="cst_service" />
+    </AssociationSet>
+    <AssociationSet Name="FK_odd_order_id" Association="Self.FK_odd_order_id">
+      <End Role="orders" EntitySet="orders" />
+      <End Role="orders_line" EntitySet="orders_line" />
+    </AssociationSet>
+    <AssociationSet Name="FK_odd_prod_id" Association="Self.FK_odd_prod_id">
+      <End Role="product" EntitySet="product" />
+      <End Role="orders_line" EntitySet="orders_line" />
+    </AssociationSet>
+    <AssociationSet Name="FK_stk_prod_id" Association="Self.FK_stk_prod_id">
+      <End Role="product" EntitySet="product" />
+      <End Role="storage" EntitySet="storage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pla_chc_id" Association="Self.FK_pla_chc_id">
+      <End Role="sal_chance" EntitySet="sal_chance" />
+      <End Role="sal_plan" EntitySet="sal_plan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_rf_right_code" Association="Self.FK_rf_right_code">
+      <End Role="sys_right" EntitySet="sys_right" />
+      <End Role="sys_role_right" EntitySet="sys_role_right" />
+    </AssociationSet>
+    <AssociationSet Name="FK_rf_role_id" Association="Self.FK_rf_role_id">
+      <End Role="sys_role" EntitySet="sys_role" />
+      <End Role="sys_role_right" EntitySet="sys_role_right" />
+    </AssociationSet>
+    <AssociationSet Name="FK_usr_role_id" Association="Self.FK_usr_role_id">
+      <End Role="sys_role" EntitySet="sys_role" />
+      <End Role="sys_user" EntitySet="sys_user" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

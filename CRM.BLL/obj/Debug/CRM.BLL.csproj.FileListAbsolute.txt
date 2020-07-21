@@ -1,0 +1,123 @@
+E:\BASE4\CRM2.0\CRM.BLL\bin\Debug\CRM.BLL.dll
+E:\BASE4\CRM2.0\CRM.BLL\bin\Debug\CRM.BLL.pdb
+E:\BASE4\CRM2.0\CRM.BLL\obj\Debug\ResolveAssemblyReference.cache
+E:\BASE4\CRM2.0\CRM.BLL\obj\Debug\CRM.BLL.dll
+E:\BASE4\CRM2.0\CRM.BLL\obj\Debug\CRM.BLL.pdb
+E:\BASE4\CRM2.0\CRM.BLL\bin\Debug\CRM.DAL.dll
+E:\BASE4\CRM2.0\CRM.BLL\bin\Debug\CRM.Model.dll
+E:\BASE4\CRM2.0\CRM.BLL\bin\Debug\CRM.DAL.pdb
+E:\BASE4\CRM2.0\CRM.BLL\bin\Debug\CRM.Model.pdb
+C:\Users\Administrator\Desktop\CRM2.0\CRM.BLL\bin\Debug\CRM.BLL.dll
+C:\Users\Administrator\Desktop\CRM2.0\CRM.BLL\bin\Debug\CRM.BLL.pdb
+C:\Users\Administrator\Desktop\CRM2.0\CRM.BLL\bin\Debug\CRM.DAL.dll
+C:\Users\Administrator\Desktop\CRM2.0\CRM.BLL\bin\Debug\CRM.Model.dll
+C:\Users\Administrator\Desktop\CRM2.0\CRM.BLL\bin\Debug\CRM.DAL.pdb
+C:\Users\Administrator\Desktop\CRM2.0\CRM.BLL\bin\Debug\CRM.Model.pdb
+C:\Users\Administrator\Desktop\CRM2.0\CRM.BLL\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\CRM2.0\CRM.BLL\obj\Debug\CRM.BLL.dll
+C:\Users\Administrator\Desktop\CRM2.0\CRM.BLL\obj\Debug\CRM.BLL.pdb
+E:\原E盘\BASE4班\CRM2.0\CRM.BLL\bin\Debug\CRM.BLL.dll
+E:\原E盘\BASE4班\CRM2.0\CRM.BLL\bin\Debug\CRM.BLL.pdb
+E:\原E盘\BASE4班\CRM2.0\CRM.BLL\bin\Debug\CRM.DAL.dll
+E:\原E盘\BASE4班\CRM2.0\CRM.BLL\bin\Debug\CRM.Model.dll
+E:\原E盘\BASE4班\CRM2.0\CRM.BLL\bin\Debug\CRM.DAL.pdb
+E:\原E盘\BASE4班\CRM2.0\CRM.BLL\bin\Debug\CRM.Model.pdb
+E:\原E盘\BASE4班\CRM2.0\CRM.BLL\obj\Debug\ResolveAssemblyReference.cache
+E:\原E盘\BASE4班\CRM2.0\CRM.BLL\obj\Debug\CRM.BLL.dll
+E:\原E盘\BASE4班\CRM2.0\CRM.BLL\obj\Debug\CRM.BLL.pdb
+E:\Users\Liu_Xinqi\Desktop\CRM2.0\CRM.BLL\bin\Debug\CRM.BLL.dll
+E:\Users\Liu_Xinqi\Desktop\CRM2.0\CRM.BLL\bin\Debug\CRM.BLL.pdb
+E:\Users\Liu_Xinqi\Desktop\CRM2.0\CRM.BLL\bin\Debug\CRM.DAL.dll
+E:\Users\Liu_Xinqi\Desktop\CRM2.0\CRM.BLL\bin\Debug\CRM.Model.dll
+E:\Users\Liu_Xinqi\Desktop\CRM2.0\CRM.BLL\bin\Debug\CRM.DAL.pdb
+E:\Users\Liu_Xinqi\Desktop\CRM2.0\CRM.BLL\bin\Debug\CRM.Model.pdb
+E:\Users\Liu_Xinqi\Desktop\CRM2.0\CRM.BLL\obj\Debug\ResolveAssemblyReference.cache
+E:\Users\Liu_Xinqi\Desktop\CRM2.0\CRM.BLL\obj\Debug\CRM.BLL.dll
+E:\Users\Liu_Xinqi\Desktop\CRM2.0\CRM.BLL\obj\Debug\CRM.BLL.pdb
+E:\BASE4班\CRM2.0\CRM.BLL\bin\Debug\CRM.BLL.dll
+E:\BASE4班\CRM2.0\CRM.BLL\bin\Debug\CRM.BLL.pdb
+E:\BASE4班\CRM2.0\CRM.BLL\bin\Debug\CRM.DAL.dll
+E:\BASE4班\CRM2.0\CRM.BLL\bin\Debug\CRM.Model.dll
+E:\BASE4班\CRM2.0\CRM.BLL\bin\Debug\CRM.DAL.pdb
+E:\BASE4班\CRM2.0\CRM.BLL\bin\Debug\CRM.Model.pdb
+E:\BASE4班\CRM2.0\CRM.BLL\obj\Debug\ResolveAssemblyReference.cache
+E:\BASE4班\CRM2.0\CRM.BLL\obj\Debug\CRM.BLL.dll
+E:\BASE4班\CRM2.0\CRM.BLL\obj\Debug\CRM.BLL.pdb
+E:\新建文件夹\BASE4\CRM2.0\CRM.BLL\bin\Debug\CRM.BLL.dll
+E:\新建文件夹\BASE4\CRM2.0\CRM.BLL\bin\Debug\CRM.BLL.pdb
+E:\新建文件夹\BASE4\CRM2.0\CRM.BLL\bin\Debug\CRM.DAL.dll
+E:\新建文件夹\BASE4\CRM2.0\CRM.BLL\bin\Debug\CRM.Model.dll
+E:\新建文件夹\BASE4\CRM2.0\CRM.BLL\bin\Debug\CRM.DAL.pdb
+E:\新建文件夹\BASE4\CRM2.0\CRM.BLL\bin\Debug\CRM.Model.pdb
+E:\新建文件夹\BASE4\CRM2.0\CRM.BLL\obj\Debug\ResolveAssemblyReference.cache
+E:\新建文件夹\BASE4\CRM2.0\CRM.BLL\obj\Debug\CRM.BLL.dll
+E:\新建文件夹\BASE4\CRM2.0\CRM.BLL\obj\Debug\CRM.BLL.pdb
+H:\邓均U盘\CRM项目\BASE4\CRM2.0\CRM.BLL\bin\Debug\CRM.BLL.dll
+H:\邓均U盘\CRM项目\BASE4\CRM2.0\CRM.BLL\bin\Debug\CRM.BLL.pdb
+H:\邓均U盘\CRM项目\BASE4\CRM2.0\CRM.BLL\bin\Debug\CRM.DAL.dll
+H:\邓均U盘\CRM项目\BASE4\CRM2.0\CRM.BLL\bin\Debug\CRM.Model.dll
+H:\邓均U盘\CRM项目\BASE4\CRM2.0\CRM.BLL\bin\Debug\CRM.DAL.pdb
+H:\邓均U盘\CRM项目\BASE4\CRM2.0\CRM.BLL\bin\Debug\CRM.Model.pdb
+H:\邓均U盘\CRM项目\BASE4\CRM2.0\CRM.BLL\obj\Debug\ResolveAssemblyReference.cache
+H:\邓均U盘\CRM项目\BASE4\CRM2.0\CRM.BLL\obj\Debug\CRM.BLL.dll
+H:\邓均U盘\CRM项目\BASE4\CRM2.0\CRM.BLL\obj\Debug\CRM.BLL.pdb
+F:\CRM2.0\CRM.BLL\bin\Debug\CRM.BLL.dll
+F:\CRM2.0\CRM.BLL\bin\Debug\CRM.BLL.pdb
+F:\CRM2.0\CRM.BLL\bin\Debug\CRM.DAL.dll
+F:\CRM2.0\CRM.BLL\bin\Debug\CRM.Model.dll
+F:\CRM2.0\CRM.BLL\bin\Debug\CRM.DAL.pdb
+F:\CRM2.0\CRM.BLL\bin\Debug\CRM.Model.pdb
+F:\CRM2.0\CRM.BLL\obj\Debug\ResolveAssemblyReference.cache
+F:\CRM2.0\CRM.BLL\obj\Debug\CRM.BLL.dll
+F:\CRM2.0\CRM.BLL\obj\Debug\CRM.BLL.pdb
+F:\小小项目\CRM2.0\CRM.BLL\bin\Debug\CRM.BLL.dll
+F:\小小项目\CRM2.0\CRM.BLL\bin\Debug\CRM.BLL.pdb
+F:\小小项目\CRM2.0\CRM.BLL\bin\Debug\CRM.DAL.dll
+F:\小小项目\CRM2.0\CRM.BLL\bin\Debug\CRM.Model.dll
+F:\小小项目\CRM2.0\CRM.BLL\bin\Debug\CRM.DAL.pdb
+F:\小小项目\CRM2.0\CRM.BLL\bin\Debug\CRM.Model.pdb
+F:\小小项目\CRM2.0\CRM.BLL\obj\Debug\ResolveAssemblyReference.cache
+F:\小小项目\CRM2.0\CRM.BLL\obj\Debug\CRM.BLL.dll
+F:\小小项目\CRM2.0\CRM.BLL\obj\Debug\CRM.BLL.pdb
+E:\工作目录\7月17日\CRM2.0\CRM2.0\CRM.BLL\bin\Debug\CRM.BLL.dll
+E:\工作目录\7月17日\CRM2.0\CRM2.0\CRM.BLL\bin\Debug\CRM.BLL.pdb
+E:\工作目录\7月17日\CRM2.0\CRM2.0\CRM.BLL\bin\Debug\CRM.DAL.dll
+E:\工作目录\7月17日\CRM2.0\CRM2.0\CRM.BLL\bin\Debug\CRM.Model.dll
+E:\工作目录\7月17日\CRM2.0\CRM2.0\CRM.BLL\bin\Debug\CRM.DAL.pdb
+E:\工作目录\7月17日\CRM2.0\CRM2.0\CRM.BLL\bin\Debug\CRM.Model.pdb
+E:\工作目录\7月17日\CRM2.0\CRM2.0\CRM.BLL\obj\Debug\ResolveAssemblyReference.cache
+E:\工作目录\7月17日\CRM2.0\CRM2.0\CRM.BLL\obj\Debug\CRM.BLL.dll
+E:\工作目录\7月17日\CRM2.0\CRM2.0\CRM.BLL\obj\Debug\CRM.BLL.pdb
+F:\CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\51aspx_CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\CRM.BLL\bin\Debug\CRM.BLL.dll
+F:\CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\51aspx_CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\CRM.BLL\bin\Debug\CRM.BLL.pdb
+F:\CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\51aspx_CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\CRM.BLL\bin\Debug\CRM.DAL.dll
+F:\CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\51aspx_CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\CRM.BLL\bin\Debug\CRM.Model.dll
+F:\CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\51aspx_CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\CRM.BLL\bin\Debug\CRM.DAL.pdb
+F:\CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\51aspx_CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\CRM.BLL\bin\Debug\CRM.Model.pdb
+F:\CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\51aspx_CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\CRM.BLL\obj\Debug\ResolveAssemblyReference.cache
+F:\CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\51aspx_CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\CRM.BLL\obj\Debug\CRM.BLL.dll
+F:\CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\51aspx_CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\CRM.BLL\obj\Debug\CRM.BLL.pdb
+D:\好例子网_CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\CRM.BLL\bin\Debug\CRM.BLL.dll
+D:\好例子网_CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\CRM.BLL\bin\Debug\CRM.BLL.pdb
+D:\好例子网_CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\CRM.BLL\bin\Debug\CRM.DAL.dll
+D:\好例子网_CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\CRM.BLL\bin\Debug\CRM.Model.dll
+D:\好例子网_CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\CRM.BLL\bin\Debug\CRM.DAL.pdb
+D:\好例子网_CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\CRM.BLL\bin\Debug\CRM.Model.pdb
+D:\好例子网_CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\CRM.BLL\obj\Debug\CRM.BLL.csprojResolveAssemblyReference.cache
+D:\好例子网_CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\CRM.BLL\obj\Debug\CRM.BLL.dll
+D:\好例子网_CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\CRMMVC2f7347474-8bc4-4be0-9726-97a3cd240a62\CRM.BLL\obj\Debug\CRM.BLL.pdb
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.BLL\bin\Debug\CRM.BLL.dll
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.BLL\bin\Debug\CRM.BLL.pdb
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.BLL\bin\Debug\CRM.DAL.dll
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.BLL\bin\Debug\CRM.Model.dll
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.BLL\bin\Debug\EntityFramework.dll
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.BLL\bin\Debug\CRM.DAL.pdb
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.BLL\bin\Debug\CRM.DAL.dll.config
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.BLL\bin\Debug\CRM.Model.pdb
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.BLL\bin\Debug\CRM.Model.dll.config
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.BLL\bin\Debug\EntityFramework.xml
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.BLL\obj\Debug\CRM.BLL.csprojAssemblyReference.cache
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.BLL\obj\Debug\CRM.BLL.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.BLL\obj\Debug\CRM.BLL.csproj.CopyComplete
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.BLL\obj\Debug\CRM.BLL.dll
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.BLL\obj\Debug\CRM.BLL.pdb

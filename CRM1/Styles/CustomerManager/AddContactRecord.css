@@ -1,0 +1,22 @@
+﻿.divTable 
+{
+	width:400px;
+	height:200px;
+}
+#divControlEnd
+{
+	width:400px;
+}
+th
+{
+	width:150px;
+}
+td .text
+{
+	width:250px;
+}
+td
+{
+	width:280px;
+	text-align:left;
+}

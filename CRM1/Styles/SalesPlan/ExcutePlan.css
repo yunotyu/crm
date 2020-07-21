@@ -1,0 +1,14 @@
+﻿.private
+{
+    position:fixed;
+    bottom:-10px;
+    padding-top:10px;
+    height:40px;
+    background-color:White;
+    left:0px;
+    right:0px;
+}
+#privateH
+{
+    height:52px;
+}

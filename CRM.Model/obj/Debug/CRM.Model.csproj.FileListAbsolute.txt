@@ -1,0 +1,16 @@
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.Model\bin\Debug\CRM.Model.dll.config
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.Model\bin\Debug\CRM.Model.dll
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.Model\bin\Debug\CRM.Model.pdb
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.Model\bin\Debug\EntityFramework.dll
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.Model\bin\Debug\EntityFramework.xml
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.Model\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.Model\obj\Debug\CRM.Model.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.Model\obj\Debug\CRM.Model.csproj.CopyComplete
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.Model\obj\Debug\CRM.Model.dll
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.Model\obj\Debug\CRM.Model.pdb
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.Model\bin\Debug\LinqKit.dll
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.Model\bin\Debug\LinqKit.xml
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.Model\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.Model\obj\Debug\CRM.Model.csprojAssemblyReference.cache

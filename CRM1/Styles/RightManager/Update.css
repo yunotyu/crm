@@ -1,0 +1,20 @@
+﻿body
+{
+}
+
+legend
+{
+    color: Gray;
+    cursor: pointer;
+}
+fieldset
+{
+    color: #014F8A;
+    text-align: left;
+    margin: 5px;
+    line-height: 20px;
+}
+fieldset input, fieldset label
+{
+    cursor: pointer;
+}

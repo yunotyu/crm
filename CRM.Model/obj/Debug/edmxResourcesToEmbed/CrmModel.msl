@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="lf_crm_db2ModelStoreContainer" CdmEntityContainer="lf_crm_db2Entities">
+    <EntitySetMapping Name="bas_dict">
+      <EntityTypeMapping TypeName="lf_crm_db2Model.bas_dict">
+        <MappingFragment StoreEntitySet="bas_dict">
+          <ScalarProperty Name="dict_id" ColumnName="dict_id" />
+          <ScalarProperty Name="dict_type" ColumnName="dict_type" />
+          <ScalarProperty Name="dict_item" ColumnName="dict_item" />
+          <ScalarProperty Name="dict_value" ColumnName="dict_value" />
+          <ScalarProperty Name="dict_is_editable" ColumnName="dict_is_editable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cst_activity">
+      <EntityTypeMapping TypeName="lf_crm_db2Model.cst_activity">
+        <MappingFragment StoreEntitySet="cst_activity">
+          <ScalarProperty Name="atv_id" ColumnName="atv_id" />
+          <ScalarProperty Name="atv_cust_no" ColumnName="atv_cust_no" />
+          <ScalarProperty Name="atv_cust_name" ColumnName="atv_cust_name" />
+          <ScalarProperty Name="atv_date" ColumnName="atv_date" />
+          <ScalarProperty Name="atv_place" ColumnName="atv_place" />
+          <ScalarProperty Name="atv_title" ColumnName="atv_title" />
+          <ScalarProperty Name="atv_desc" ColumnName="atv_desc" />
+          <ScalarProperty Name="aty_remark" ColumnName="aty_remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cst_customer">
+      <EntityTypeMapping TypeName="lf_crm_db2Model.cst_customer">
+        <MappingFragment StoreEntitySet="cst_customer">
+          <ScalarProperty Name="cust_Id" ColumnName="cust_Id" />
+          <ScalarProperty Name="cust_no" ColumnName="cust_no" />
+          <ScalarProperty Name="cust_name" ColumnName="cust_name" />
+          <ScalarProperty Name="cust_region" ColumnName="cust_region" />
+          <ScalarProperty Name="cust_manager_id" ColumnName="cust_manager_id" />
+          <ScalarProperty Name="cust_manager_name" ColumnName="cust_manager_name" />
+          <ScalarProperty Name="cust_level" ColumnName="cust_level" />
+          <ScalarProperty Name="cust_level_label" ColumnName="cust_level_label" />
+          <ScalarProperty Name="cust_satisfy" ColumnName="cust_satisfy" />
+          <ScalarProperty Name="cust_credit" ColumnName="cust_credit" />
+          <ScalarProperty Name="cust_addr" ColumnName="cust_addr" />
+          <ScalarProperty Name="cust_zip" ColumnName="cust_zip" />
+          <ScalarProperty Name="cust_tel" ColumnName="cust_tel" />
+          <ScalarProperty Name="cust_fax" ColumnName="cust_fax" />
+          <ScalarProperty Name="cust_website" ColumnName="cust_website" />
+          <ScalarProperty Name="cust_licence_no" ColumnName="cust_licence_no" />
+          <ScalarProperty Name="cust_chieftain" ColumnName="cust_chieftain" />
+          <ScalarProperty Name="cust_bankroll" ColumnName="cust_bankroll" />
+          <ScalarProperty Name="cust_turnover" ColumnName="cust_turnover" />
+          <ScalarProperty Name="cust_bank" ColumnName="cust_bank" />
+          <ScalarProperty Name="cust_bank_account" ColumnName="cust_bank_account" />
+          <ScalarProperty Name="cust_local_tax_no" ColumnName="cust_local_tax_no" />
+          <ScalarProperty Name="cust_national_tax_no" ColumnName="cust_national_tax_no" />
+          <ScalarProperty Name="cust_status" ColumnName="cust_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cst_linkman">
+      <EntityTypeMapping TypeName="lf_crm_db2Model.cst_linkman">
+        <MappingFragment StoreEntitySet="cst_linkman">
+          <ScalarProperty Name="lkm_id" ColumnName="lkm_id" />
+          <ScalarProperty Name="lkm_cust_no" ColumnName="lkm_cust_no" />
+          <ScalarProperty Name="lkm_cust_name" ColumnName="lkm_cust_name" />
+          <ScalarProperty Name="lkm_name" ColumnName="lkm_name" />
+          <ScalarProperty Name="lkm_sex" ColumnName="lkm_sex" />
+          <ScalarProperty Name="lkm_postion" ColumnName="lkm_postion" />
+          <ScalarProperty Name="lkm_tel" ColumnName="lkm_tel" />
+          <ScalarProperty Name="lkm_mobile" ColumnName="lkm_mobile" />
+          <ScalarProperty Name="lkm_memo" ColumnName="lkm_memo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cst_lost">
+      <EntityTypeMapping TypeName="lf_crm_db2Model.cst_lost">
+        <MappingFragment StoreEntitySet="cst_lost">
+          <ScalarProperty Name="lst_id" ColumnName="lst_id" />
+          <ScalarProperty Name="lst_cust_no" ColumnName="lst_cust_no" />
+          <ScalarProperty Name="lst_cust_name" ColumnName="lst_cust_name" />
+          <ScalarProperty Name="lst_cust_manager_id" ColumnName="lst_cust_manager_id" />
+          <ScalarProperty Name="lst_cust_manager_name" ColumnName="lst_cust_manager_name" />
+          <ScalarProperty Name="lst_last_order_date" ColumnName="lst_last_order_date" />
+          <ScalarProperty Name="lst_lost_date" ColumnName="lst_lost_date" />
+          <ScalarProperty Name="lst_delay" ColumnName="lst_delay" />
+          <ScalarProperty Name="lst_reason" ColumnName="lst_reason" />
+          <ScalarProperty Name="lst_status" ColumnName="lst_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cst_service">
+      <EntityTypeMapping TypeName="lf_crm_db2Model.cst_service">
+        <MappingFragment StoreEntitySet="cst_service">
+          <ScalarProperty Name="svr_id" ColumnName="svr_id" />
+          <ScalarProperty Name="svr_type" ColumnName="svr_type" />
+          <ScalarProperty Name="svr_title" ColumnName="svr_title" />
+          <ScalarProperty Name="svr_cust_no" ColumnName="svr_cust_no" />
+          <ScalarProperty Name="svr_cust_name" ColumnName="svr_cust_name" />
+          <ScalarProperty Name="svr_status" ColumnName="svr_status" />
+          <ScalarProperty Name="svr_request" ColumnName="svr_request" />
+          <ScalarProperty Name="svr_create_id" ColumnName="svr_create_id" />
+          <ScalarProperty Name="svr_create_by" ColumnName="svr_create_by" />
+          <ScalarProperty Name="svr_create_date" ColumnName="svr_create_date" />
+          <ScalarProperty Name="svr_due_id" ColumnName="svr_due_id" />
+          <ScalarProperty Name="svr_due_to" ColumnName="svr_due_to" />
+          <ScalarProperty Name="svr_due_date" ColumnName="svr_due_date" />
+          <ScalarProperty Name="svr_deal" ColumnName="svr_deal" />
+          <ScalarProperty Name="svr_deal_id" ColumnName="svr_deal_id" />
+          <ScalarProperty Name="svr_deal_by" ColumnName="svr_deal_by" />
+          <ScalarProperty Name="svr_deal_date" ColumnName="svr_deal_date" />
+          <ScalarProperty Name="svr_result" ColumnName="svr_result" />
+          <ScalarProperty Name="svr_satisfy" ColumnName="svr_satisfy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orders">
+      <EntityTypeMapping TypeName="lf_crm_db2Model.orders">
+        <MappingFragment StoreEntitySet="orders">
+          <ScalarProperty Name="odr_id" ColumnName="odr_id" />
+          <ScalarProperty Name="odr_cust_no" ColumnName="odr_cust_no" />
+          <ScalarProperty Name="odr_cust_name" ColumnName="odr_cust_name" />
+          <ScalarProperty Name="odr_date" ColumnName="odr_date" />
+          <ScalarProperty Name="odr_addr" ColumnName="odr_addr" />
+          <ScalarProperty Name="odr_status" ColumnName="odr_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orders_line">
+      <EntityTypeMapping TypeName="lf_crm_db2Model.orders_line">
+        <MappingFragment StoreEntitySet="orders_line">
+          <ScalarProperty Name="odd_id" ColumnName="odd_id" />
+          <ScalarProperty Name="odd_order_id" ColumnName="odd_order_id" />
+          <ScalarProperty Name="odd_prod_id" ColumnName="odd_prod_id" />
+          <ScalarProperty Name="odd_count" ColumnName="odd_count" />
+          <ScalarProperty Name="odd_unit" ColumnName="odd_unit" />
+          <ScalarProperty Name="odd_price" ColumnName="odd_price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="product">
+      <EntityTypeMapping TypeName="lf_crm_db2Model.product">
+        <MappingFragment StoreEntitySet="product">
+          <ScalarProperty Name="prod_id" ColumnName="prod_id" />
+          <ScalarProperty Name="prod_name" ColumnName="prod_name" />
+          <ScalarProperty Name="prod_type" ColumnName="prod_type" />
+          <ScalarProperty Name="prod_batch" ColumnName="prod_batch" />
+          <ScalarProperty Name="prod_unit" ColumnName="prod_unit" />
+          <ScalarProperty Name="prod_price" ColumnName="prod_price" />
+          <ScalarProperty Name="prod_memo" ColumnName="prod_memo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sal_chance">
+      <EntityTypeMapping TypeName="lf_crm_db2Model.sal_chance">
+        <MappingFragment StoreEntitySet="sal_chance">
+          <ScalarProperty Name="chc_id" ColumnName="chc_id" />
+          <ScalarProperty Name="chc_source" ColumnName="chc_source" />
+          <ScalarProperty Name="chc_cust_name" ColumnName="chc_cust_name" />
+          <ScalarProperty Name="chc_title" ColumnName="chc_title" />
+          <ScalarProperty Name="chc_rate" ColumnName="chc_rate" />
+          <ScalarProperty Name="chc_linkman" ColumnName="chc_linkman" />
+          <ScalarProperty Name="chc_tel" ColumnName="chc_tel" />
+          <ScalarProperty Name="chc_desc" ColumnName="chc_desc" />
+          <ScalarProperty Name="chc_create_id" ColumnName="chc_create_id" />
+          <ScalarProperty Name="chc_create_by" ColumnName="chc_create_by" />
+          <ScalarProperty Name="chc_create_date" ColumnName="chc_create_date" />
+          <ScalarProperty Name="chc_due_id" ColumnName="chc_due_id" />
+          <ScalarProperty Name="chc_due_to" ColumnName="chc_due_to" />
+          <ScalarProperty Name="chc_due_date" ColumnName="chc_due_date" />
+          <ScalarProperty Name="chc_status" ColumnName="chc_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sal_plan">
+      <EntityTypeMapping TypeName="lf_crm_db2Model.sal_plan">
+        <MappingFragment StoreEntitySet="sal_plan">
+          <ScalarProperty Name="pla_id" ColumnName="pla_id" />
+          <ScalarProperty Name="pla_chc_id" ColumnName="pla_chc_id" />
+          <ScalarProperty Name="pla_date" ColumnName="pla_date" />
+          <ScalarProperty Name="pla_todo" ColumnName="pla_todo" />
+          <ScalarProperty Name="pla_result" ColumnName="pla_result" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="storage">
+      <EntityTypeMapping TypeName="lf_crm_db2Model.storage">
+        <MappingFragment StoreEntitySet="storage">
+          <ScalarProperty Name="stk_id" ColumnName="stk_id" />
+          <ScalarProperty Name="stk_prod_id" ColumnName="stk_prod_id" />
+          <ScalarProperty Name="stk_warehouse" ColumnName="stk_warehouse" />
+          <ScalarProperty Name="stk_ware" ColumnName="stk_ware" />
+          <ScalarProperty Name="stk_count" ColumnName="stk_count" />
+          <ScalarProperty Name="stk_memo" ColumnName="stk_memo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_right">
+      <EntityTypeMapping TypeName="lf_crm_db2Model.sys_right">
+        <MappingFragment StoreEntitySet="sys_right">
+          <ScalarProperty Name="right_code" ColumnName="right_code" />
+          <ScalarProperty Name="right_parent_code" ColumnName="right_parent_code" />
+          <ScalarProperty Name="right_type" ColumnName="right_type" />
+          <ScalarProperty Name="right_text" ColumnName="right_text" />
+          <ScalarProperty Name="right_url" ColumnName="right_url" />
+          <ScalarProperty Name="right_tip" ColumnName="right_tip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_role">
+      <EntityTypeMapping TypeName="lf_crm_db2Model.sys_role">
+        <MappingFragment StoreEntitySet="sys_role">
+          <ScalarProperty Name="role_id" ColumnName="role_id" />
+          <ScalarProperty Name="role_name" ColumnName="role_name" />
+          <ScalarProperty Name="role_desc" ColumnName="role_desc" />
+          <ScalarProperty Name="role_flag" ColumnName="role_flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_role_right">
+      <EntityTypeMapping TypeName="lf_crm_db2Model.sys_role_right">
+        <MappingFragment StoreEntitySet="sys_role_right">
+          <ScalarProperty Name="rf_id" ColumnName="rf_id" />
+          <ScalarProperty Name="rf_role_id" ColumnName="rf_role_id" />
+          <ScalarProperty Name="rf_right_code" ColumnName="rf_right_code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_user">
+      <EntityTypeMapping TypeName="lf_crm_db2Model.sys_user">
+        <MappingFragment StoreEntitySet="sys_user">
+          <ScalarProperty Name="usr_id" ColumnName="usr_id" />
+          <ScalarProperty Name="usr_name" ColumnName="usr_name" />
+          <ScalarProperty Name="usr_pwd" ColumnName="usr_pwd" />
+          <ScalarProperty Name="usr_role_id" ColumnName="usr_role_id" />
+          <ScalarProperty Name="usr_state" ColumnName="usr_state" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

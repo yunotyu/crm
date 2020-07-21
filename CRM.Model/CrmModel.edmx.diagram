@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c97e06813ea0485e89edc20b8521359e" Name="Diagram1">
+        <EntityTypeShape EntityType="lf_crm_db2Model.bas_dict" Width="1.5" PointX="10.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="lf_crm_db2Model.cst_activity" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="lf_crm_db2Model.cst_customer" Width="1.5" PointX="0.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="lf_crm_db2Model.cst_linkman" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="lf_crm_db2Model.cst_lost" Width="1.5" PointX="3" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="lf_crm_db2Model.cst_service" Width="1.5" PointX="3" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="lf_crm_db2Model.orders" Width="1.5" PointX="3" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="lf_crm_db2Model.orders_line" Width="1.5" PointX="5.25" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="lf_crm_db2Model.product" Width="1.5" PointX="3" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="lf_crm_db2Model.sal_chance" Width="1.5" PointX="5.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="lf_crm_db2Model.sal_plan" Width="1.5" PointX="8" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="lf_crm_db2Model.storage" Width="1.5" PointX="5.25" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="lf_crm_db2Model.sys_right" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="lf_crm_db2Model.sys_role" Width="1.5" PointX="5.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="lf_crm_db2Model.sys_role_right" Width="1.5" PointX="8" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="lf_crm_db2Model.sys_user" Width="1.5" PointX="8" PointY="6.5" IsExpanded="true" />
+        <AssociationConnector Association="lf_crm_db2Model.FK_atv_cust_no" ManuallyRouted="false" />
+        <AssociationConnector Association="lf_crm_db2Model.FK_lkm_cust_no" ManuallyRouted="false" />
+        <AssociationConnector Association="lf_crm_db2Model.FK_lst_cust_no" ManuallyRouted="false" />
+        <AssociationConnector Association="lf_crm_db2Model.FK_odr_cust_no" ManuallyRouted="false" />
+        <AssociationConnector Association="lf_crm_db2Model.FK_svr_cust_no" ManuallyRouted="false" />
+        <AssociationConnector Association="lf_crm_db2Model.FK_odd_order_id" ManuallyRouted="false" />
+        <AssociationConnector Association="lf_crm_db2Model.FK_odd_prod_id" ManuallyRouted="false" />
+        <AssociationConnector Association="lf_crm_db2Model.FK_stk_prod_id" ManuallyRouted="false" />
+        <AssociationConnector Association="lf_crm_db2Model.FK_pla_chc_id" ManuallyRouted="false" />
+        <AssociationConnector Association="lf_crm_db2Model.FK_rf_right_code" ManuallyRouted="false" />
+        <AssociationConnector Association="lf_crm_db2Model.FK_rf_role_id" ManuallyRouted="false" />
+        <AssociationConnector Association="lf_crm_db2Model.FK_usr_role_id" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

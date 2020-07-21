@@ -1,0 +1,186 @@
+﻿*
+{
+    margin: 0;
+    padding: 0;
+    border: 0px none #F0FFFF;
+}
+* html ul ul li
+{
+    margin-bottom: -1px;
+}
+* html ul ul li a, * html ul li a
+{
+    height: 100%;
+}
+a
+{
+    color: #F0FFFF;
+    text-decoration: underline;
+}
+
+code
+{
+    padding: 0.5em;
+    border-top: 1px solid #666666;
+    border-right: 1px solid #999999;
+    border-bottom: 1px solid #999999;
+    border-left: 1px solid #666666;
+    margin: 0.5em 0 0.5em 0;
+    display: block;
+}
+h1
+{
+    margin: 1em 0 0.5em 0;
+    display: block;
+    font-weight: normal;
+}
+h2
+{
+    border-top: 1px solid #F0F0F0;
+    padding-top: 0.5em;
+    margin: 1em 0 1em 0;
+    display: block;
+    font-weight: normal;
+}
+#divMenu
+{
+    width: 150px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    padding-bottom: 10px;
+    color: #fff;
+    float: left;
+    z-index: 100;
+    left: -3px;
+    width: 172px;
+    position: absolute;
+}
+
+/* Styles for Example #1 改变菜单的高度*/
+#ulMenu
+{
+    margin: 0;
+    padding: 0;
+    width: 190px;
+    list-style-type: none;
+    line-height: 110%;
+}
+/*头部标题*/
+#ulMenu div
+{
+    border-top: 1px solid #003867;
+    border-bottom: 1px solid #003867;
+    margin: 0;
+    width: 170px;
+    padding: 6px 10px 6px 10px;
+    background: #005094 url(../submenu/top_10.gif) repeat-x;
+}
+
+#ulMenu .header
+{
+    background-color: #7B7B7B;
+}
+/*菜单关闭*/
+#ulMenu .closed
+{
+    /*background-image: url(../images/ha-down.gif);*/
+    background: #005094 url(../submenu/bg-news.gif) repeat-x;
+}
+
+#ulMenu .closed, #ulMenu .opened
+{
+    padding-right: 10px;
+    background-position: 98% 50%; /*background-repeat: no-repeat;*/
+}
+
+/*菜单打开*/
+#ulMenu .opened
+{
+    /*background-image: url(../images/ha-up.gif);*/
+    background: #005094 url(../submenu/nav_bg.gif) repeat-x;
+}
+
+#ulMenu a
+{
+    display: block;
+    text-decoration: none;
+}
+
+
+/*菜单滑动背景*/
+#ulMenu ul
+{
+    background-color: #fff;
+    overflow: hidden;
+}
+
+#ulMenu li
+{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background-color: #848484;
+    color: #F0FFFF;
+}
+
+/*父菜单*/
+#ulMenu > li > a
+{
+    /*border-top: 1px solid #3373a9;     border-bottom: 1px solid #003867;*/
+    padding: 9px 10px 8px 25px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    background: #005094 url(../submenu/title.gif) repeat-x;
+}
+
+/*父菜单鼠标悬浮*/
+#ulMenu a.hover
+{
+    /*background-color: #004c8d;*/ /*border-top: 1px solid #1a4c76;*/
+}
+
+/*子菜单*/
+#ulMenu > li > ul > li > a
+{
+    padding: 8px 10px 8px 47px; /* border-top: 1px solid #3373a9;       border-bottom: 1px solid #003867;*/
+    border-top: 1px solid #fff;
+    display: block;
+    color: #005094;
+    text-decoration: none;
+    width: 132px;
+    background: #005094 url(../submenu/page-bg.gif) repeat-x;
+}
+
+/*子菜单鼠标悬浮或当前子菜单*/
+#ulMenu li ul li a:hover,.curr
+{
+    /*border-top: 1px solid #1a4c76;*/
+    background: #F9F9F9 url(../submenu/sidenav_li_a.gif) no-repeat right center;
+    border-top: 1px solid #fff;
+    color: #004c8d;
+    font-size: 12px;
+    font-weight: bold;
+}
+/*
+#ulMenu li.active a, #ulMenu li li.active a
+{
+    border-top: 1px solid #5F5F5F;
+    border-bottom: 1px solid #7B7B7B;
+    border-left: 1px solid #757575;
+    border-right: 1px solid #9A9A9A;
+    background-color: #404040;
+    color: #F0FFFF;
+}
+
+
+#ulMenu li.active li a, #ulMenu li li a
+{
+    padding: 2px 4px 2px 8px;
+    border-top: 1px solid #696969;
+    border-left: 1px solid #696969;
+    border-right: 1px solid #8A8A8A;
+    border-bottom: 1px solid #7B7B7B;
+    background-color: #757575;
+    color: #F0FFFF;
+}*/

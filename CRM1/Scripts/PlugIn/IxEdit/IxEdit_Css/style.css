@@ -1,0 +1,50 @@
+﻿#menu { 
+  background-color: #d7dde5;
+  width: 300px;
+  font-size: 14px;
+  padding: 8px 24px;
+}
+ul.decorated { 
+  list-style-type: none;
+  background-image: url(bg-grad.gif);
+  border: 1px solid #999;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  padding:12px 0 14px 0 !important;
+  text-align: center;
+  background-repeat: repeat-x;
+  background-color: #ddd;
+}
+ul.decorated li { 
+  display: inline;
+  margin: auto 2px;
+  padding: 0;
+}
+ul.decorated a { 
+  color: #000;
+  text-decoration: none;
+  border: 1px solid #999;
+  background-image: url(bg-button-grad.gif);
+  background-repeat: repeat-x;
+  background-position: left top;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  text-shadow: white 0px 1px 0px;
+  margin: 0;
+  overflow: visible;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 4px 12px;
+  font-weight: bold;
+}
+
+#foldertobedropped{
+	background-color:red;
+	width:100px;
+	height:100px;
+}
+#filetobedragged{
+	background-color:green;
+	width:50px;
+	height:50px;
+}
