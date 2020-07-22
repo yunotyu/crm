@@ -18,6 +18,6 @@ namespace CRM.Model
         /// <summary>
         /// 客户贡献总金额
         /// </summary>
-        public decimal TotalMoney { get; set; }
+        public decimal? TotalMoney { get; set; }
     }
 }

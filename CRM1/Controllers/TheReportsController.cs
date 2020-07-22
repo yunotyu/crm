@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using System.Web.Script.Serialization;
 using CRM.Model;
 using CRM.BLL;
+using CRM.DAL;
 
 namespace CRM.Web.Controllers
 {
@@ -24,7 +25,15 @@ namespace CRM.Web.Controllers
         public ActionResult Contribute()
         {
             orders searchEntity = new orders();
-            ViewData["pagerHelper"] = new PageHelper<ContributeReportModel>(new TheReportsService().GetContributesBySearchEntity(searchEntity), 1, 10);
+            var db = new LinqHelper().Db;
+            var sql = from line in db.orders_line
+                      join order in db.orders
+                      on line.odd_order_id equals order.odr_id
+                      select new { line.odd_price, line.odd_count, order.odr_cust_name } into tab
+                      group tab by tab.odr_cust_name into newGroup
+                      select new ContributeReportModel { Name = newGroup.Key, TotalMoney = newGroup.Sum(n => n.odd_count * n.odd_price) };
+
+            ViewData["pagerHelper"] = new PageHelper<ContributeReportModel>(sql.ToList(), 1, 10);
             ViewData["reportData"] = new JavaScriptSerializer().Serialize(ViewData["pagerHelper"] as PageHelper<ContributeReportModel>);
             SetYeasList();
             return View(searchEntity);
