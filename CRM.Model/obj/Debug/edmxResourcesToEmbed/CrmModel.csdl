@@ -102,7 +102,7 @@
     <Property Name="svr_request" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="svr_create_id" Type="Int32" Nullable="false" />
     <Property Name="svr_create_by" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="svr_create_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="svr_create_date" Type="DateTime" Precision="3" />
     <Property Name="svr_due_id" Type="Int32" />
     <Property Name="svr_due_to" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="svr_due_date" Type="DateTime" Precision="3" />

@@ -120,7 +120,7 @@
       <DependentUpon>CrmModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Utils\Common.cs" />
-    <Compile Include="Utils\ExpressionHelper.cs" />
+    <Compile Include="Utils\ExpressionUtils.cs" />
     <Compile Include="ViewModels\Chance_Plan_ViewModel.cs" />
     <Compile Include="ViewModels\Cst_Custom_ViewModel.cs" />
   </ItemGroup>

@@ -23,7 +23,7 @@ namespace CRM.Model
         public string svr_request { get; set; }
         public int svr_create_id { get; set; }
         public string svr_create_by { get; set; }
-        public System.DateTime svr_create_date { get; set; }
+        public Nullable<System.DateTime> svr_create_date { get; set; }
         public Nullable<int> svr_due_id { get; set; }
         public string svr_due_to { get; set; }
         public Nullable<System.DateTime> svr_due_date { get; set; }

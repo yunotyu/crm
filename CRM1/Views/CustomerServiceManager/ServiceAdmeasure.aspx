@@ -51,7 +51,7 @@
                     客户
                 </th>
                 <td>
-                    <input name="svr_cust_name" value='<%=Model.svr_cust_name %>' type="text" class="text" />
+                     <%=Html.DropDownList("svr_cust_name",ViewData["cst_name"] as List<SelectListItem>,"--请选择--") %>
                 </td>
                 <th>
                     概要
@@ -120,6 +120,9 @@
                     创建时间
                 </th>
                 <th>
+                    已分配给
+                </th>
+                <th>
                     分配给
                 </th>
                 <th>
@@ -149,6 +152,9 @@
                 </td>
                 <td>
                     <%=Html.Encode(item.svr_create_date) %>
+                </td>
+                <td>
+                    <%=Html.Encode(item.svr_due_to) %>
                 </td>
                 <td>
                     <%=Html.DropDownList("svr_due_id", ViewData["userList"] as SelectList,"--请选择--")%>

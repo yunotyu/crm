@@ -6,6 +6,8 @@ using System.Web.Mvc;
 using CRM.Model;
 using CRM.BLL;
 using CRM.DAL;
+using System.Linq.Expressions;
+using CRM.Model.Utils;
 
 namespace CRM.Web.Controllers
 {
@@ -40,10 +42,27 @@ namespace CRM.Web.Controllers
         [HttpPost]
         public ActionResult Index(FormCollection forms)
         {
+            
             int curPage = int.Parse(forms["curPage"]);
+            Expression<Func<cst_lost, bool>> expression = null;
+            expression = ExpressionUtils.True<cst_lost>();
+            if (!string.IsNullOrEmpty(forms["lst_cust_name"]))
+            {
+                expression = ExpressionUtils.And<cst_lost>(expression, l => l.lst_cust_name.Contains(forms["lst_cust_name"]));
+            }
+            if (!string.IsNullOrEmpty(forms["lst_cust_manager_name"]))
+            {
+                expression = ExpressionUtils.And<cst_lost>(expression, l => l.lst_cust_manager_name.Contains(forms["lst_cust_manager_name"]));
+            }
+            if (int.TryParse(forms["lst_status"],out int status))
+            {
+                expression = ExpressionUtils.And<cst_lost>(expression, l => l.lst_status== status);
+            }
+            var list = new LinqHelper().Db.cst_lost.Where(expression.Compile()).ToList();
+
             cst_lost searchEntity = new cst_lost();
             UpdateModel<cst_lost>(searchEntity);
-            ViewData["pagerHelper"] = new PageHelper<cst_lost>(new cst_lostService().GetLostCustomerBySearchEntity(searchEntity), curPage, 3);
+            ViewData["pagerHelper"] = new PageHelper<cst_lost>(list, curPage, 3);
             ViewData["cstStatus"] = new SelectList(new bas_dictService().GetDictsByType("客户流失状态"), "dict_value", "dict_item");
             return View(searchEntity);
         }

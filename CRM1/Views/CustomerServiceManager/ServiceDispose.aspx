@@ -35,7 +35,7 @@
                     客户
                 </th>
                 <td>
-                    <input name="svr_cust_name" value='<%=Model.svr_cust_name %>' type="text" class="text" />
+                     <%=Html.DropDownList("svr_cust_name", ViewData["cst_name"] as List<SelectListItem>, "--请选择--")%>
                 </td>
                 <th>
                     概要

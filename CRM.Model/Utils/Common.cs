@@ -86,7 +86,16 @@ namespace CRM.Model.Utils
                     db.Entry<T>(model).Property(p.Key).IsModified = true;
                 }
             }
-            return db.SaveChanges()>0;
+            try
+            {
+                return db.SaveChanges() > 0;
+
+            }
+            catch (Exception e)
+            {
+
+                throw;
+            }
         }
 
         public static string GetCstManaName(string name,string id)

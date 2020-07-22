@@ -94,7 +94,7 @@
     <Property Name="svr_request" Type="varchar" MaxLength="3000" Nullable="false" />
     <Property Name="svr_create_id" Type="int" Nullable="false" />
     <Property Name="svr_create_by" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="svr_create_date" Type="datetime" Nullable="false" />
+    <Property Name="svr_create_date" Type="datetime" />
     <Property Name="svr_due_id" Type="int" />
     <Property Name="svr_due_to" Type="varchar" MaxLength="50" />
     <Property Name="svr_due_date" Type="datetime" />
