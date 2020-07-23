@@ -60,19 +60,21 @@ namespace CRM.DAL
                         group c by c.cust_level_label into nc
                         select new ComposingReportModel
                         {
-                            TypeName = nc.Key,
+                            TypeName =nc.Key.ToString() ,
                             CustomerCount = nc.Count()
                         }).ToList();
             }
             else if (searchEntity.TypeName == "按信用度")
             {
-                return (from c in db.cst_customer
-                        group c by c.cust_credit into nc
-                        select new ComposingReportModel
-                        {
-                            TypeName = new bas_dictRepository().GetDictsByType("客户信用度")[nc.Key.Value].dict_item,
-                            CustomerCount = nc.Count()
-                        }).ToList();
+                var list = from c in db.cst_customer
+                           group c by c.cust_credit into nc
+                           select new ComposingReportModel
+                           {
+                               TypeName = db.bas_dict.Where(b => b.dict_type == "客户信用度" && b.dict_value == nc.Key.Value.ToString()).Select(b => b.dict_item).FirstOrDefault(),
+                               CustomerCount = nc.Count()
+                           };
+
+                return list.ToList();
             }
             else
             {
@@ -80,7 +82,7 @@ namespace CRM.DAL
                         group c by c.cust_satisfy into nc
                         select new ComposingReportModel
                         {
-                            TypeName = new bas_dictRepository().GetDictsByType("客户满意度")[nc.Key.Value].dict_item,
+                            TypeName =db.bas_dict.Where(b => b.dict_type == "客户满意度" && b.dict_value == nc.Key.Value.ToString()).Select(b => b.dict_item).FirstOrDefault(),
                             CustomerCount = nc.Count()
                         }).ToList();
             }

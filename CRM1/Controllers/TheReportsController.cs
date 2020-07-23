@@ -7,6 +7,9 @@ using System.Web.Script.Serialization;
 using CRM.Model;
 using CRM.BLL;
 using CRM.DAL;
+using System.Linq.Expressions;
+using CRM.Model.Utils;
+using System.IO;
 
 namespace CRM.Web.Controllers
 {
@@ -14,7 +17,7 @@ namespace CRM.Web.Controllers
     /// 各类报表控制器
     /// </summary>
     [LoginValidator]
-    [MyException]
+    //[MyException]
     public class TheReportsController : Controller
     {
         #region 客户贡献报表分析
@@ -45,13 +48,94 @@ namespace CRM.Web.Controllers
         [HttpPost]
         public ActionResult Contribute(FormCollection forms)
         {
+            var db = new LinqHelper().Db;
+            List<ContributeReportModel> list = new List<ContributeReportModel>();
+            var sql = from line in db.orders_line
+                      join order in db.orders
+                      on line.odd_order_id equals order.odr_id
+                      select new { line.odd_price, line.odd_count, order.odr_cust_name,order.odr_date} into tab
+                      group tab by tab.odr_cust_name into newGroup
+                      select new ContributeReportModel { Name = newGroup.Key, TotalMoney = newGroup.Sum(n => n.odd_count * n.odd_price),Year= newGroup.Select(n=>n.odr_date).FirstOrDefault() };
+
+            if (!string.IsNullOrEmpty(forms["odr_cust_name"]))
+            {
+                var s = forms["odr_cust_name"];
+                sql =sql.Where(c => c.Name.Contains(s));
+            }
+
+            if (int.Parse(forms["year"])>0)
+            {
+                foreach(var item in sql.ToList())
+                {
+                    if (item.Year.Year.ToString()== forms["year"])
+                    {
+                        list.Add(item);
+                    }
+                }
+            }
+            else
+            {
+                list = sql.ToList();
+            }
+
             int curPage = int.Parse(forms["curPage"]);
+
             orders searchEntity = new orders();
             SetYeasList();
             UpdateModel<orders>(searchEntity);
-            ViewData["pagerHelper"] = new PageHelper<ContributeReportModel>(new TheReportsService().GetContributesBySearchEntity(searchEntity), curPage, 10);
+            ViewData["pagerHelper"] = new PageHelper<ContributeReportModel>(list, curPage, 3);
             ViewData["reportData"] = new JavaScriptSerializer().Serialize(ViewData["pagerHelper"] as PageHelper<ContributeReportModel>);
             return View(searchEntity);
+        }
+
+
+        /// <summary>
+        /// 导出Excel表格
+        /// </summary>
+        /// <param name="odr_cust_name"></param>
+        /// <param name="year"></param>
+        /// <returns></returns>
+        public string ExportContribute(string odr_cust_name,string year)
+        {
+            var db = new LinqHelper().Db;
+            List<ContributeReportModel> list = new List<ContributeReportModel>();
+            var sql = from line in db.orders_line
+                      join order in db.orders
+                      on line.odd_order_id equals order.odr_id
+                      select new { line.odd_price, line.odd_count, order.odr_cust_name, order.odr_date } into tab
+                      group tab by tab.odr_cust_name into newGroup
+                      select new ContributeReportModel { Name = newGroup.Key, TotalMoney = newGroup.Sum(n => n.odd_count * n.odd_price), Year = newGroup.Select(n => n.odr_date).FirstOrDefault() };
+
+            if (!string.IsNullOrEmpty(odr_cust_name))
+            {
+                var s = odr_cust_name;
+                sql = sql.Where(c => c.Name.Contains(s));
+            }
+
+            if (int.Parse(year) > 0)
+            {
+                foreach (var item in sql.ToList())
+                {
+                    if (item.Year.Year.ToString() == year)
+                    {
+                        list.Add(item);
+                    }
+                }
+            }
+            else
+            {
+                list = sql.ToList();
+            }
+
+            //这里用的是ajax请求，需要先保存到本地，再返回路径 window.location.href = data;
+            var excel = ExcelHelper.Export<ContributeReportModel>(new ContributeReportModel(), list);
+            //MemoryStream ms = new MemoryStream();
+            var guid = Guid.NewGuid().ToString();
+            FileStream file = new FileStream(Server.MapPath("/Excel/"+ guid + ".xls"), FileMode.Create);
+            excel.Write(file);
+            file.Close();
+            return "/Excel/" + guid + ".xls";
+
         }
         /// <summary>
         /// 生成最近五年的选择项列表集合，并存放于ViewData["years"]中
@@ -105,6 +189,25 @@ namespace CRM.Web.Controllers
             SetReportTypeList();
             return View(searchEntity);
         }
+
+        public string ExportComposing(string TypeName)
+        {
+            ComposingReportModel searchEntity = new ComposingReportModel();
+            searchEntity.TypeName = TypeName;
+            UpdateModel<ComposingReportModel>(searchEntity);
+            var list = new TheReportsService().GetComposingReportBySearchEntity(searchEntity);
+
+            //这里用的是ajax请求，需要先保存到本地，再返回路径 window.location.href = data;
+            var excel = ExcelHelper.Export<ComposingReportModel>(new ComposingReportModel(), list);
+            //MemoryStream ms = new MemoryStream();
+            var guid = Guid.NewGuid().ToString();
+            FileStream file = new FileStream(Server.MapPath("/Excel/" + guid + ".xls"), FileMode.Create);
+            excel.Write(file);
+            file.Close();
+            return "/Excel/" + guid + ".xls";
+
+        }
+
         /// <summary>
         /// 生成客户构成报表方式的选择项列表集合，并存放于ViewData["reportType"]中
         /// </summary>

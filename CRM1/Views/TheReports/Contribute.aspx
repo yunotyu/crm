@@ -23,6 +23,16 @@
             chart.angle = 30;
             chart.write("divReport");
         });
+        $(function () {
+            $("#export").click(function () {
+                $.ajax({
+                    type: 'get', url: "/TheReports/ExportContribute", data: { "odr_cust_name": $("#odr_cust_name").val(), "year": $("#year").val() },
+                    success:function(data) {
+                        window.location.href = data;
+                    }
+                });
+            })
+        })
     </script>
 </head>
 <body>
@@ -37,7 +47,7 @@
     <%Html.BeginForm("Contribute", "TheReports", FormMethod.Post, new { id = "form1" }); %>
     <!--表头操作部分-->
     <div id="divListTop">
-        <input type="button" class="transparent button2" value="导出Excel" />
+        <input type="button" class="transparent button2" value="导出Excel" id="export" />
         <input type="submit" class="transparent button" value="查询" />
     </div>
     <!--搜索条件部分-->
@@ -48,13 +58,13 @@
                     客户名称
                 </th>
                 <td>
-                    <input name="odr_cust_name" value='<%=Model.odr_cust_name %>' type="text" class="text" />
+                    <input name="odr_cust_name" value='<%=Model.odr_cust_name %>' type="text" class="text" id="odr_cust_name"/>
                 </td>
                 <th>
                     年份
                 </th>
                 <td>
-                <%=Html.DropDownList("odr_id", ViewData["years"] as SelectList)%>
+                <%=Html.DropDownList("year", ViewData["years"] as SelectList,new { id="year"})%>
                 </td>
                 <th>
                 </th>

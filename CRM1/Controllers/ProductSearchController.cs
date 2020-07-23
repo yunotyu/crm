@@ -5,6 +5,9 @@ using System.Web;
 using System.Web.Mvc;
 using CRM.Model;
 using CRM.BLL;
+using CRM.DAL;
+using System.Linq.Expressions;
+using CRM.Model.Utils;
 
 namespace CRM.Web.Controllers
 {
@@ -22,7 +25,7 @@ namespace CRM.Web.Controllers
         public ActionResult Index()
         {
             product searchEntity = new product();
-            ViewData["pagerHelper"] = new PageHelper<product>(new productService().GetProductsBySearchEntity(searchEntity), 1, 3);
+            ViewData["pagerHelper"] = new PageHelper<product>(new LinqHelper().Db.product.Where(p=>true).ToList(), 1, 3);
             return View(searchEntity);
         }
         /// <summary>
@@ -33,10 +36,23 @@ namespace CRM.Web.Controllers
         [HttpPost]
         public ActionResult Index(FormCollection forms)
         {
+            Expression<Func<product, bool>> exp = ExpressionUtils.True<product>();
+            if (!string.IsNullOrEmpty(forms["prod_name"]))
+            {
+                exp = ExpressionUtils.And<product>(exp, d => d.prod_name.Contains(forms["prod_name"]));
+            }
+            if (!string.IsNullOrEmpty(forms["prod_type"]))
+            {
+                exp = ExpressionUtils.And<product>(exp, d => d.prod_type.Contains(forms["prod_type"]));
+            }
+            if (!string.IsNullOrEmpty(forms["prod_batch"]))
+            {
+                exp = ExpressionUtils.And<product>(exp, d => d.prod_batch.Contains(forms["prod_batch"]));
+            }
             int curPage = int.Parse(forms["curPage"]);
             product searchEntity = new product();
             UpdateModel<product>(searchEntity);
-            ViewData["pagerHelper"] = new PageHelper<product>(new productService().GetProductsBySearchEntity(searchEntity), curPage, 3);
+            ViewData["pagerHelper"] = new PageHelper<product>(new LinqHelper().Db.product.Where(exp.Compile()).ToList(), curPage, 3);
             return View(searchEntity);
         }
 

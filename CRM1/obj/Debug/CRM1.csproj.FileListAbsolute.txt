@@ -52,3 +52,12 @@ C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM1\bin\EntityFramewo
 C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM1\bin\LinqKit.dll
 C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM1\bin\LinqKit.xml
 C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM1\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM1\bin\BouncyCastle.Crypto.dll
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM1\bin\ICSharpCode.SharpZipLib.dll
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM1\bin\NPOI.dll
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM1\bin\NPOI.OOXML.dll
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM1\bin\NPOI.OpenXml4Net.dll
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM1\bin\NPOI.OpenXmlFormats.dll
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM1\bin\BouncyCastle.Crypto.xml
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM1\bin\ICSharpCode.SharpZipLib.pdb
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM1\bin\ICSharpCode.SharpZipLib.xml

@@ -24,6 +24,16 @@
             chart.angle = 30;
             chart.write("divReport");
         });
+          $(function () {
+            $("#export").click(function () {
+                $.ajax({
+                    type: 'get', url: "/TheReports/ExportComposing", data: { "TypeName": $("#TypeName").val() },
+                    success:function(data) {
+                        window.location.href = data;
+                    }
+                });
+            })
+        })
     </script>
 </head>
 <body>
@@ -38,7 +48,7 @@
     <%Html.BeginForm("Composing", "TheReports", FormMethod.Post, new { id = "form1" }); %>
     <!--表头操作部分-->
     <div id="divListTop">
-        <input type="button" class="transparent button2" value="导出Excel" />
+        <input type="button" class="transparent button2" value="导出Excel" id="export" />
         <input type="submit" class="transparent button" value="查询" />
     </div>
     <!--搜索条件部分-->

@@ -121,3 +121,9 @@ C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.BLL\obj\Debug\CRM.
 C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.BLL\obj\Debug\CRM.BLL.csproj.CopyComplete
 C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.BLL\obj\Debug\CRM.BLL.dll
 C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.BLL\obj\Debug\CRM.BLL.pdb
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.BLL\bin\Debug\NPOI.dll
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.BLL\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.BLL\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.BLL\bin\Debug\ICSharpCode.SharpZipLib.pdb
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.BLL\bin\Debug\ICSharpCode.SharpZipLib.xml
+C:\Users\admin\Documents\Visual Studio 2012\Projects\CRM1\CRM.BLL\bin\Debug\BouncyCastle.Crypto.xml

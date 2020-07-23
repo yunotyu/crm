@@ -5,6 +5,9 @@ using System.Web;
 using System.Web.Mvc;
 using CRM.Model;
 using CRM.BLL;
+using CRM.DAL;
+using System.Linq.Expressions;
+using CRM.Model.Utils;
 
 namespace CRM.Web.Controllers
 {
@@ -23,7 +26,7 @@ namespace CRM.Web.Controllers
         public ActionResult Index()
         {
             bas_dict searchEntity = new bas_dict();
-            ViewData["pagerHelper"] = new PageHelper<bas_dict>(new bas_dictService().GetDictsBySearchEntity(searchEntity), 1, 3);
+            ViewData["pagerHelper"] = new PageHelper<bas_dict>(new LinqHelper().Db.bas_dict.Where(d=>true).ToList(), 1, 3);
             return View(searchEntity);
         }
         /// <summary>
@@ -34,10 +37,23 @@ namespace CRM.Web.Controllers
         [HttpPost]
         public ActionResult Index(FormCollection forms)
         {
+            Expression<Func<bas_dict,bool> > exp = ExpressionUtils.True<bas_dict>();
+            if (!string.IsNullOrEmpty(forms["dict_type"])){
+                exp = ExpressionUtils.And<bas_dict>(exp, d => d.dict_type==(forms["dict_type"]));
+            }
+            if (!string.IsNullOrEmpty(forms["dict_item"]))
+            {
+                exp = ExpressionUtils.And<bas_dict>(exp, d => d.dict_item==(forms["dict_item"]));
+            }
+            if (!string.IsNullOrEmpty(forms["dict_value"]))
+            {
+                exp = ExpressionUtils.And<bas_dict>(exp, d => d.dict_value==(forms["dict_value"]));
+            }
+
             int curPage = int.Parse(forms["curPage"]);
             bas_dict searchEntity = new bas_dict();
             UpdateModel<bas_dict>(searchEntity);
-            ViewData["pagerHelper"] = new PageHelper<bas_dict>(new bas_dictService().GetDictsBySearchEntity(searchEntity), curPage, 3);
+            ViewData["pagerHelper"] = new PageHelper<bas_dict>(new LinqHelper().Db.bas_dict.Where(exp.Compile()).ToList(), curPage, 3);
             return View(searchEntity);
         }
         /// <summary>
@@ -58,10 +74,15 @@ namespace CRM.Web.Controllers
         [HttpPost]
         public ActionResult Update(int? id, FormCollection forms)
         {
+            var db = new LinqHelper().Db;
             bas_dict newObj = new bas_dict();
-            newObj = new RefreshMyModel().RefreshToFormCollection<bas_dict>(ref forms, new bas_dictService().GetDictsById(id.Value));
+            if(int.TryParse(id.ToString(),out int i))
+            {
+                newObj = db.bas_dict.Where(b => b.dict_id == id).FirstOrDefault();
+            }
             UpdateModel<bas_dict>(newObj);
-            new bas_dictService().UpdateDict(newObj);
+            db.Entry(newObj).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
             return RedirectToAction("Index");
         }
         /// <summary>
